@@ -1,17 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="test.jinesh.syncdemoproject.MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        tools:context="test.jinesh.syncdemoproject.MainActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/wheatherLayout"
+            android:visibility="visible"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:id="@+id/statusImage"
+                android:layout_height="30dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="26dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="25dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Climate Satatus"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:id="@+id/textView3"
+                android:layout_alignBottom="@+id/statusImage"
+                android:layout_toRightOf="@+id/statusImage"
+                android:layout_toEndOf="@+id/statusImage"
+                android:layout_marginLeft="13dp"
+                android:layout_marginStart="13dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="City              "
+                android:textSize="13sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:layout_marginTop="13dp"
+                android:layout_below="@+id/statusImage"
+                android:layout_alignLeft="@+id/statusImage"
+                android:layout_alignStart="@+id/statusImage" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="77"
+                android:textSize="70sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_below="@+id/textView3"
+                android:layout_toRightOf="@+id/textView"
+                android:layout_toEndOf="@+id/textView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="0"
+                android:textSize="35sp"
+                android:id="@+id/zero"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3"
+                android:layout_toRightOf="@+id/textView2"
+                android:layout_toEndOf="@+id/textView2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="C"
+                android:textSize="35sp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView2"
+                android:layout_alignBottom="@+id/textView2"
+                android:layout_toRightOf="@+id/zero"
+                android:layout_toEndOf="@+id/zero"
+                android:id="@+id/textView4" />
+            <ProgressBar
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                 android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/textView5"
+                android:layout_toStartOf="@+id/textView5"
+                android:id="@+id/progressBar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Syncing Wheather Info..."
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:layout_marginRight="10dp"
+                android:layout_alignBottom="@+id/progressBar"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Wind Speed"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView6"
+                android:layout_alignBottom="@+id/textView3"
+                android:layout_toRightOf="@+id/textView3"
+                android:layout_toEndOf="@+id/textView3"
+                android:layout_marginLeft="33dp"
+                android:layout_marginStart="33dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Sun Info"
+                android:layout_marginTop="2dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView7"
+                android:layout_alignLeft="@+id/textView7"
+                android:layout_alignStart="@+id/textView7"
+                android:id="@+id/textView8" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Date"
+                android:textSize="10sp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView5"
+                android:layout_alignBottom="@+id/textView5"
+                android:id="@+id/date"
+                android:layout_alignLeft="@+id/statusImage"
+                android:layout_alignStart="@+id/statusImage" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="state   "
+                android:textSize="12sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView9"
+               android:layout_below="@+id/textView"
+                android:layout_alignLeft="@+id/textView"
+                android:layout_alignStart="@+id/textView" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Country"
+                android:layout_marginTop="2dp"
+                android:layout_alignLeft="@+id/textView9"
+                android:layout_alignStart="@+id/textView9"
+                android:id="@+id/country"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView9"
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Atmosphere"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView7"
+                android:layout_marginTop="2dp"
+                android:layout_centerVertical="true"
+                android:layout_below="@+id/textView6"
+                android:layout_alignLeft="@+id/textView6"
+                android:layout_alignStart="@+id/textView6" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/noInternetLayout"
+            android:visibility="gone"
+            android:layout_height="150dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="No Internet Connection"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</ScrollView>
