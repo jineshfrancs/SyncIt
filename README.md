@@ -1,6 +1,8 @@
 # SyncIt
 SyncIt will call a method implemented in your activity to notify data connection changes.
 
+![Output sample](https://github.com/jineshfrancs/SyncIt/blob/master/screens/screen1.gif) 
+
 Add SyncApplication to your manifest
 
 ```
